@@ -1,0 +1,1019 @@
+/*
+Theme Name: Twenty Twenty Child
+Description: The Twenty Twenty Child Theme was used as a starting point for the Floripoppins lifestyle blog and website. It utilizes advanced custom fields and custom post type templates to allow Flo ease of use when adding blog posts, recipes, or new pages to her website.
+Author: Christopher Bean
+Author uri: http://chrisbeandev.com
+Template: twentytwenty
+Version: 2.0.0
+Text Domain: twentytwenty-child
+*/
+
+/*####### Default Styles ########*/
+#site-content{
+    background-color: #ffffff;
+}
+
+ul,
+li{
+    margin: 0;
+}
+/*fonts, font sizes, and colors go here*/
+
+body, p{
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    font-size: 2.0rem;
+}
+
+p, a{
+    color: #3b3b3b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    color: #f4ce00;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+
+
+body:not(.overlay-header) .primary-menu > li > a{
+    color: #f4ce00;
+}
+
+.primary-menu li{
+    font-size: 2rem;
+}
+
+.section-inner{
+    max-width: 90%;
+}
+
+img{
+    margin: 0;
+    padding: 0;
+}
+
+/*####### HEADER STYLES ########*/
+
+.header-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    max-width: 90%;
+    padding-top: 10px;
+}
+
+.header-navigation-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-flow: row nowrap;
+    width: 100%;
+    border-top: 1px solid #3b3b3b;
+}
+
+.primary-menu-wrapper{
+    display: block;
+/*width in combo with header-havigation-wrapper allows nav to be full width of container*/
+    width: 100%;
+}
+
+/*logo*/
+
+.header-titles-wrapper{
+    padding: 0;
+}
+
+/*work around for logo size*/
+.site-logo img{
+    max-height: 25rem;
+}
+
+/*navigation*/
+
+ul.primary-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: 0;
+}
+
+.primary-menu > li{
+    margin: 15px 0 0 0;
+}
+
+
+/*####### FOOTER STYLES #######*/
+
+#site-footer{
+    background-color: #dedce1;
+}
+
+.footer-credits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.footer-credits p{
+    font-size: 85%;
+}
+
+#site-footer .section-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.footer-credits p:nth-child(3){
+    margin-bottom: 5px;
+}
+
+.footer-credits p:nth-child(4){
+    font-size: 70%;
+}
+
+/*social links*/
+
+ul#menu-social-media-nav-1.social-media-menu{
+    list-style: none;
+}
+
+nav.social-media-navigation{
+    width: 80%;
+    margin: 50px 0;
+    
+}
+
+#menu-social-media-nav-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+.menu-item i._mi{
+    font-size: 1.5em;
+    color: #ffffff;
+background: #BED1D5;
+height: 45px;
+width: 45px;
+border: 1px solid #3b3b3b;
+border-radius: 50%;
+text-align: center;
+padding-top: 10px;
+}
+
+/*############### ABOUT PAGE ################*/
+
+/*banner*/
+
+.home-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.content-wrapper{
+    width: 90%;
+    margin: 50px 0;
+}
+
+.home-banner .content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    margin-bottom: 0;
+}
+
+.home-banner .content-wrapper figure{
+    width: 33%;
+}
+
+
+
+/*about me*/
+
+.about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.front-page-title{
+    text-align: center;
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 4.5rem;
+}
+
+.alternate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.top-about,
+.bottom-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.top-about figure,
+.bottom-about figure{
+    max-width: 80%;
+    margin: 15px 0 25px 0;
+}
+
+.top-about figure img,
+.bottom-about figure img{
+    border-radius: 50%;
+}
+
+.bottom-about p{
+    margin-top: 20px;
+}
+
+
+
+/*###CTA###*/
+
+.contact-cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background-color: #ecd4b4;
+}
+
+.contact-cta h1{
+    text-align: center;
+    color: #3b3b3b;
+    margin-top: 0;
+}
+
+.contact-cta p{
+    margin-bottom: 0;
+}
+
+.contact-btn-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-top: 20px;
+}
+
+.contact-btn-link a{
+    font-size: 2.2rem;
+    padding: 10px 40px;
+    color: #3b3b3b;
+    background-color: #BED1D5;
+    border: 1px solid #000;
+    text-decoration: none;
+}
+
+.contact-btn-link a:hover{
+    background-color: #dedce1;
+}
+
+
+/*### Latest Recipe ###*/
+
+.latest-recipe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.latest-recipe h2{
+    margin-top: 0;
+}
+
+.latest-recipe h4{
+    color: #3b3b3b;
+}
+
+.latest-recipe a{
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/*######################## Recipes/blog archive page #########################*/
+
+.recipe-archive{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+/*Search and Top of page categories*/
+
+#search-2 input[type="submit"]{
+    background-color: #dedce1;
+}
+
+#search-2 input[type="submit"]:hover{
+    background-color: #ecd4b4;
+}
+
+/*categories menu*/
+
+#fourth{
+    margin-bottom: 25px;
+}
+
+#wpcategorieswidget-3{
+    background-color: #ecd4b4;
+    padding: 20px 0;
+}
+
+.categories .widget-title{
+    text-align: center;
+}
+
+#tertiary .widget_wpcategorieswidget ul li{
+    border: none;
+    font-size: 1.8rem;
+}
+
+#tertiary .widget_wpcategorieswidget ul li a{
+    color:#3b3b3b;
+}
+
+#tertiary .widget_wpcategorieswidget ul li a:hover{
+    color: #fff;
+}
+
+
+/*recipe excerpts*/
+
+.recipe-excerpts{
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+.recipe-excerpts .individual-recipe{
+    border: 1px solid rgba(0,0,0,0);
+}
+
+
+.recipe-excerpts .individual-recipe:hover{
+/*    background-color: rgba(236, 212, 180, .25);*/
+    border: 1px solid rgba(0,0,0, .8);
+}
+
+
+.recipe-title{
+    margin-top: 0;
+}
+
+.recipe-details p{
+    margin-top: 25px;
+}
+
+.individual-recipe a{
+    text-decoration: none;
+}
+
+
+/*archive sidebar*/
+
+#media_image-3 img{
+    border-radius: 50%;
+}
+
+#text-3 h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.0rem;
+}
+
+/*cat menu in sidebar*/
+
+#wpcategorieswidget-2{
+    background-color: #ecd4b4;
+    padding: 20px 0;
+    width: 100%;
+    display: none;
+}
+
+.categories .widget-title{
+    text-align: center;
+}
+
+#secondary .widget_wpcategorieswidget ul li{
+    border: none;
+    font-size: 1.8rem;
+}
+
+/*counter firefox link color*/
+#secondary .widget_wpcategorieswidget ul li a{
+    color: #3b3b3b;
+}
+
+#secondary .widget_wpcategorieswidget ul li a:hover{
+    color: #fff;
+}
+
+/*######################## Category Archive Page ##################*/
+
+.archive-header{
+    padding: 0 0 4rem 0;
+}
+
+.header-footer-group .color-accent{
+    color: #3b3b3b;
+}
+
+
+/*######################## Individual Blog Posts ############################*/
+
+
+.single-blog-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.single-blog-post{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.blog-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 100%;
+}
+
+.blog-title{
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.blog-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.blog-info h5{
+    color: #3b3b3b;
+}
+
+.blog-info h5{
+    
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.recipe-type{
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+.recipe-type .post-categories{
+    list-style: none;
+}
+
+.recipe-type .post-categories li a{
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.blog-content h2{
+    text-align: center;
+}
+
+.blog-content ul{
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+/*###blog sidebar###*/
+
+#secondary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    margin-top: 50px;
+}
+
+#secondary p{
+    font-family: 'Roboto', sans-serif;
+}
+
+#media_image-2 img{
+    border-radius: 50%;
+}
+
+#text-2 h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.0rem;
+}
+
+#secondary .popular-posts ul li a{
+    font-size: 2.8rem;
+    text-decoration: none;
+    color: #3b3b3b;
+}
+
+/*######################## CONTACT PAGE #######################*/
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background: url(img/contact-bg-faded.png) center no-repeat;
+    background-size: cover;
+}
+
+.contact-txt{
+    text-align: center;
+}
+
+.contact-txt p{
+    margin-bottom: 30px;
+}
+
+.nf-before-form-content .nf-form-fields-required{
+    font-size: 85%;
+    margin-bottom: 15px;
+}
+
+/*targets ninja form submit button!*/
+input#nf-field-4.ninja-forms-field.nf-element{
+    background: #BED1D5;
+    border: 1px solid #3b3b3b;
+}
+
+/*submitted message*/
+
+.nf-form-wrap .nf-response-msg{
+    background: rgba(255,255,255, 0.4);
+    padding: 50px;
+    
+}
+
+
+/*################## 404 PAGE #########################*/
+
+.error404-content{
+    margin-bottom: 50px;
+}
+
+.error404-content .search-form input[type="submit"]{
+    background-color: #dedce1;
+}
+
+.error404-content .search-form input[type="submit"]:hover{
+    background-color: #ecd4b4;
+    
+}
+
+
+
+
+/*############################### MEDIA QUERIES ############################*/
+
+@media screen and (max-width: 320px){
+    
+/*##### Fix cluttered nav bar at SMALL screen size I.E Galaxy Fold*/
+    .primary-menu li{
+        font-size: 1.6rem;
+    }
+    
+    .archive-title{
+        width: 100%;
+    }
+    
+    .blog-info h5{
+        font-size: 1.6rem;
+    }
+    
+    .footer-credits p:nth-child(4){
+        font-size: 50%;
+    }
+}
+
+@media screen and (min-width: 768px){
+/*########################## TABLET STYLES ########################*/
+    
+/*Default styles*/
+    
+    .primary-menu li{
+        font-size: 3.2rem;
+    }
+    
+    .content-wrapper{
+        margin: 75px 0;
+        max-width: 640px;
+    }
+    
+    p{
+        font-size: 2.2rem;
+    }
+    
+/*####### HEADER STYLES #######*/
+    
+    .header-inner {
+        max-width: 640px;
+    }
+    
+/*work around for logo size*/
+    .site-logo img{
+        max-height: 27rem;
+    }
+    
+    
+/*######### FOOTER STYLES ############*/
+    
+/*counter default theme styling*/
+    #site-footer{
+        padding: 0;
+    }
+    
+/* end counter*/
+    
+    .footer-credits{
+        margin-bottom: 75px;
+    }
+    /* social links */
+    nav.social-media-navigation{
+        max-width: 60%;
+        margin: 75px 0;
+    }
+    
+    .menu-item i._mi{
+        padding-top: 9px;
+    }
+    
+/* To the top*/
+    .to-the-top{
+        margin-bottom: 25px;
+    }
+    
+/*#### ABOUT ME/ Homepage ####*/
+    
+    .front-page-title{
+        font-size: 6.4rem;
+    }
+
+    .top-about{
+        display: block;
+    }
+    
+    .top-about figure,
+    .bottom-about figure{
+        width: 45%;
+        margin: 0;
+    }
+    
+    .top-about figure{
+        float: left;
+        shape-outside: circle();
+        margin: 0 15px 15px 0;
+    }
+    
+    .top-about p{
+        text-align: justify;
+    }
+    
+    .bottom-about{
+        display: block;
+    }
+    
+    .bottom-about figure{
+        float: right;
+        shape-outside: circle();
+        margin: 0 0 15px 15px;
+    }
+    
+    .bottom-about p{
+        text-align: justify;
+        margin-top: 0;
+    }
+    
+/*## CTA ##*/
+    
+    .contact-btn-link{
+        justify-content: flex-end;
+        margin-top: 35px;
+    }
+    
+    .contact-btn-link a{
+        font-size: 2.4rem;
+        padding: 10px 60px;
+    }
+    
+
+/*############### Blog Archive Page ##########################*/
+    
+    #search-2{
+        width: 60%;
+    }
+    
+    #fourth{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        margin-bottom: 50px;
+    }
+    
+    /*hide phone view category window*/
+    #tertiary,
+    #wpcategorieswidget-3{
+    display: none;
+    
+}
+    
+    article.recipe-excerpts{
+        width: 60%;
+    }
+    
+    #wpcategorieswidget-2{
+    display: block;
+}
+    
+/*############### Category Archive Page ######################*/
+    
+    
+    
+/*############### Individual Blog Posts ######################*/
+    
+    .recipe-blog-layout{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-flow: row wrap;
+    }
+    
+    .single-blog-page .content-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-flow: row nowrap;
+    }
+    
+    .single-blog-post{
+        width: 60%;
+    }
+    
+    #secondary{
+        width: 33%;
+        margin-top: 0;
+    }
+
+/*sidebar*/
+    
+    #secondary p{
+        font-size: 1.8rem;
+    }
+    
+    #text-2 h3{
+        font-size: 3.6rem;
+    }
+    
+    #secondary .popular-posts h3{
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    #secondary .popular-posts ul li a{
+        text-decoration: none;
+        font-size: 2.8rem;
+        color: #3b3b3b;
+    }
+    
+/*###################### CONTACT PAGE ########################*/
+    
+/*form*/
+    .nf-form-content nf-fields-wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+    }
+    
+    .nf-form-content nf-fields-wrap nf-field:nth-child(1),
+    .nf-form-content nf-fields-wrap nf-field:nth-child(2){
+        width: 45%;
+    }
+    
+    .nf-form-content nf-fields-wrap nf-field:nth-child(3),
+    .nf-form-content nf-fields-wrap nf-field:nth-child(4),
+    .nf-form-content nf-fields-wrap nf-field:nth-child(5){
+        width: 100%;
+    }
+    
+    .nf-form-content #nf-field-4.ninja-forms-field{
+        font-size: 20px;
+    }
+    
+/*################## 404 PAGE #########################*/
+
+.error404-content{
+    margin-bottom: 75px;
+}
+    
+    
+}
+
+@media screen and (min-width: 1024px){
+    
+/*##### To fix paragraph text size on larger tablets. vertical orientation*/
+    p{
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+/*###################### DESKTOP STYLES ################*/
+    /*Default styles*/
+    
+    .primary-menu li{
+        font-size: 3.4rem;
+    }
+    
+    .content-wrapper{
+        max-width: 960px;
+    }
+    
+    p{
+        font-size: 2.4rem;
+    }
+    
+/*########### HEADER STYLES ##########*/
+    .header-inner {
+        max-width: 960px;
+    }
+    
+/*Work around for logo size*/
+    .site-logo img{
+        max-height: 32rem;
+    }
+    
+/*nav*/
+    ul.primary-menu{
+        justify-content: space-around;
+    }
+    
+    
+/*####### ABOUT ME/ Homepage #########*/
+    
+    .front-page-title{
+        font-size: 6.6rem;
+        margin-bottom: 75px;
+    }
+    
+    .top-about{
+        margin-bottom: 30px;
+    }
+    
+    .top-about figure{
+        margin: 0 25px 25px 0;
+    }
+    
+    .bottom-about figure{
+        margin: 0 0 25px 25px;
+    }
+    
+    
+    
+    
+/*############# FOOTER STYLES ###########*/
+    
+    .footer-credits{
+        margin-bottom: 100px;
+    }
+    
+/*social links*/
+    nav.social-media-navigation{
+        max-width: 30%;
+        margin: 100px 0;
+    }
+    
+    
+/*############### Blog Archive Page ##################*/
+    
+    #text-3 h3{
+        font-size: 3.8rem;
+    }
+    
+    #secondary p{
+        font-size: 2.2rem;
+    }
+    
+    #secondary .widget_wpcategorieswidget ul li {
+        font-size: 2.2rem;
+    }
+    
+    .widget_wp_categories_widget ul li a{
+        color: #3b3b3b;
+    }
+    
+    .categories .widget-title{
+        font-size: 2.4rem;
+    }
+    
+    
+/*############# Individual Blog Posts ###############*/
+    
+    .blog-info h5{
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+    
+    .recipe-type{
+        justify-content: flex-end;
+    }
+    
+    .recipe-type ul{
+        margin-left: 10px;
+    }
+    
+    #wpcategorieswidget-2{
+        padding: 35px 0;
+    }
+    
+    
+/*############## CONTACT PAGE ##########*/
+    
+    .contact{
+        background-position: bottom;
+    }
+    
+    .contact .content-wrapper{
+        margin: 150px 0;
+    }
+    
+    div#nf-form-1-cont{
+       display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+
+    }
+    
+    .nf-form-wrap{
+        width: 75%;
+    }
+    
+    .nf-form-wrap .nf-response-msg{
+    margin-top: 75px;
+    padding: 50px;
+    
+}
+    
+/*################## 404 PAGE #########################*/
+
+.error404-content{
+    margin-bottom: 100px;
+}
+    
+
+}
